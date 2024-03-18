@@ -14,7 +14,7 @@ with lib.blastdan; {
     cli-apps = {
       home-manager = enabled;
     };
-    toos = {
+    tools = {
       git = enabled;
     };
   };

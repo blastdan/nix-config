@@ -106,10 +106,12 @@ with lib.blastdan; {
     apps = {
       google-chrome = enabled;
       yt-music = enabled;
+      yubikey = enabled;
     };
     tools = {
       k8s = enabled;
       git = enabled;
+      podman = enabled;
     };
     desktop = {
       gnome = enabled;
