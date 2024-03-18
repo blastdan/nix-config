@@ -13,6 +13,9 @@ with lib.blastdan; {
     };
     cli-apps = {
       home-manager = enabled;
+      manix = enabled;
+      k9s = enabled;
+      lazygit = enabled;
     };
     tools = {
       git = enabled;
