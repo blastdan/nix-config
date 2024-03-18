@@ -16,6 +16,7 @@ with lib.blastdan; {
     };
     tools = {
       git = enabled;
+      direnv = enabled;
     };
   };
 }
