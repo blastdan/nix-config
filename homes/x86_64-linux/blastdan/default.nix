@@ -16,10 +16,16 @@ with lib.blastdan; {
       manix = enabled;
       k9s = enabled;
       lazygit = enabled;
+      gh = enabled;
+      xzoom = enabled;
     };
     tools = {
       git = enabled;
       direnv = enabled;
+      devbox = enabled;
+    };
+    cloud = {
+      gcloud =  enabled;
     };
   };
 }
