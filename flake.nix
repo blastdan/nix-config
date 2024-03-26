@@ -14,6 +14,11 @@
  
         nixos-wsl.url = "github:nix-community/nixos-wsl";
 
+	# Hardware Configuration
+        nixos-hardware = {
+          url = "github:nixos/nixos-hardware";
+        };
+
         # Hyprland
         hyprland = {
           url = "github:hyprwm/Hyprland";

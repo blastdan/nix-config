@@ -21,6 +21,9 @@ in
       automount = {
         root = "/mnt";
       };
+      network = {
+        hostname = "winamp";
+      };
     };
 
     # Enable native Docker support

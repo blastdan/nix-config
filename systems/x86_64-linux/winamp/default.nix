@@ -11,6 +11,13 @@ with lib.blastdan;
     user = {
       name = "nixos";
     };
+    tools = {
+      git = enabled;
+    };
+  };
+
+  home-manager.users.blastdan = {
+    home.stateVersion = "23.11"; # <---- SETTING GOES HERE
   };
 
   # This value determines the NixOS release from which the default
