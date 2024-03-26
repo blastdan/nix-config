@@ -1,5 +1,6 @@
 { modulesPath
 , inputs
+, pkgs
 , ...
 }:
 let

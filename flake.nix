@@ -19,6 +19,11 @@
           url = "github:nixos/nixos-hardware";
         };
 
+        nix-ld-rs = {
+          url = "github:nix-community/nix-ld-rs";
+          inputs.nixpkgs.follows = "nixpkgs";
+        };
+
         # Hyprland
         hyprland = {
           url = "github:hyprwm/Hyprland";
@@ -29,6 +34,8 @@
           url = "github:suchipi/Bibata_Cursor";
           flake = false;
         };
+
+        vscode-server.url = "github:nix-community/nixos-vscode-server";
     };
 
     outputs = inputs: let
@@ -54,8 +61,17 @@
         };
     in 
         lib.mkFlake {
+            
+            overlays = with inputs; [
+            ];
+
             channels-config = {
               allowUnfree = true;
-          };
+            };
+            
+            # Add modules to a specific system.
+            systems.hosts.winamp = with inputs; [
+              vscode-server.nixosModules.default
+            ];
         };
 }

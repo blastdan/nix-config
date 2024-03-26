@@ -13,6 +13,10 @@ with lib.blastdan;
     };
     tools = {
       git = enabled;
+      node = enabled;
+    };
+    services = {
+      vscode-server = enabled;
     };
   };
 
