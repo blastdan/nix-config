@@ -69,8 +69,12 @@
               allowUnfree = true;
             };
             
+            # Add modules to all NixOS systems.
+            systems.modules.nixos = with inputs; [
+              # my-input.nixosModules.my-module
+            ];
             # Add modules to a specific system.
-            systems.hosts.winamp = with inputs; [
+            systems.hosts.winamp.modules = with inputs; [
               vscode-server.nixosModules.default
             ];
         };
