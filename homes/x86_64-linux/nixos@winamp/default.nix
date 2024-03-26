@@ -2,8 +2,7 @@
 , lib
 , ...
 }:
-with lib.blastdan
-in
+with lib.blastdan;
 {
   blastdan = {
     user = {
