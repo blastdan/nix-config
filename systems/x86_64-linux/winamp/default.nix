@@ -13,7 +13,7 @@ with lib.blastdan;
     };
     tools = {
       git = enabled;
-      node = enabled;
+      k8s = enabled;
     };
     services = {
       vscode-server = enabled;

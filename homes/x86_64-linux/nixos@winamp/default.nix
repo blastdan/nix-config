@@ -15,6 +15,7 @@ with lib.blastdan;
       k9s = enabled;
       lazygit = enabled;
       gh = enabled;
+      zsh = enabled;
     };
 
     tools = {
