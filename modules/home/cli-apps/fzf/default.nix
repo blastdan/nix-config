@@ -1,18 +1,27 @@
-{ options, config, lib, pkgs, ... }:
-
+{ config
+, lib
+, options
+, pkgs
+, ...
+}:
 with lib;
 with lib.blastdan;
-let cfg = config.blastdan.cli-apps.fzf;
+let
+  cfg = config.blastdan.cli-apps.fzf;
 in
 {
-  options.blastdan.cli-apps.fzf = with types; {
+  options.blastdan.cli-apps.fzf = {
     enable = mkBoolOpt false "Whether or not to enable fzf.";
   };
 
   config = mkIf cfg.enable {
     programs.fzf = {
       enable = true;
+      package = pkgs.fzf;
+
+      enableBashIntegration = true;
       enableZshIntegration = true;
+      enableFishIntegration = true;
     };
   };
 }
