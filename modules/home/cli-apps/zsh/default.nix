@@ -30,13 +30,7 @@ in {
           # Fix an issue with tmux.
           export KEYTIMEOUT=1
 
-          # Use vim bindings.
-          set -o vi
-
           ${pkgs.toilet}/bin/toilet -f future "Blastdan" --gay
-
-          # Improved vim bindings.
-          source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
         '';
 
         shellAliases = {

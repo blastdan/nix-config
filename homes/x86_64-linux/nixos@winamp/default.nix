@@ -18,6 +18,7 @@ with lib.blastdan;
       gh-dash = enabled;
       zsh = enabled;
       fzf = enabled;
+      zoxide = enabled;
     };
 
     tools = {
