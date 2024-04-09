@@ -14,6 +14,8 @@
  
         nixos-wsl.url = "github:nix-community/nixos-wsl";
 
+        tfenv.url = "github:cjlarose/tfenv-nix";
+
 	# Hardware Configuration
         nixos-hardware = {
           url = "github:nixos/nixos-hardware";
@@ -63,6 +65,7 @@
         lib.mkFlake {
             
             overlays = with inputs; [
+              tfenv.overlays.default
             ];
 
             channels-config = {
