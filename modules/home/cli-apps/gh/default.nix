@@ -29,6 +29,7 @@ in
         pkgs.gh-dash
         pkgs.gh-eco
         pkgs.gh-markdown-preview
+        pkgs.blastdan.gh-poi
       ];
     };
   };
