@@ -31,7 +31,7 @@ with lib.blastdan;
     };
     languages = {
       go = enabled;
-    }
+    };
   };
 
   home.stateVersion = "23.11";
