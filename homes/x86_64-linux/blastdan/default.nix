@@ -13,11 +13,13 @@ with lib.blastdan; {
     };
     cli-apps = {
       home-manager = enabled;
-      manix = enabled;
       k9s = enabled;
       lazygit = enabled;
       gh = enabled;
-      xzoom = enabled;
+      zsh = enabled;
+      fzf = enabled;
+      zoxide = enabled;
+      nix-prefetch-github = enabled;
     };
     tools = {
       git = enabled;

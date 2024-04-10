@@ -15,9 +15,6 @@ with lib.blastdan;
       git = enabled;
       k8s = enabled;
     };
-    services = {
-      vscode-server = enabled;
-    };
   };
 
   home-manager.users.blastdan = {

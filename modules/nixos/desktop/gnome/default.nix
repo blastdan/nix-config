@@ -192,6 +192,7 @@ in {
           "org/gnome/desktop/wm/preferences" = {
             num-workspaces = 10;
             resize-with-right-button = true;
+            button-layout = "minimize,maximize,close";
           };
           "org/gnome/desktop/wm/keybindings" = {
             switch-to-workspace-1 = ["<Super>1"];

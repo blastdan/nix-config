@@ -36,8 +36,6 @@
           url = "github:suchipi/Bibata_Cursor";
           flake = false;
         };
-
-        vscode-server.url = "github:nix-community/nixos-vscode-server";
     };
 
     outputs = inputs: let
@@ -78,7 +76,6 @@
             ];
             # Add modules to a specific system.
             systems.hosts.winamp.modules = with inputs; [
-              vscode-server.nixosModules.default
             ];
         };
 }
