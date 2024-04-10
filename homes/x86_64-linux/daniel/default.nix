@@ -29,6 +29,9 @@ with lib.blastdan;
       terraformer = enabled;
       tfenv = enabled;
     };
+    languages = {
+      go = enabled;
+    }
   };
 
   home.stateVersion = "23.11";
