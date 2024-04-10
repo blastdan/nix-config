@@ -15,7 +15,6 @@ with lib.blastdan;
       k9s = enabled;
       lazygit = enabled;
       gh = enabled;
-      gh-dash = enabled;
       zsh = enabled;
       fzf = enabled;
       zoxide = enabled;
