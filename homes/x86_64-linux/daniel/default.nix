@@ -28,6 +28,7 @@ with lib.blastdan;
       gcloud = enabled;
       terraformer = enabled;
       tfenv = enabled;
+      terragrunt = enabled;
     };
     languages = {
       go = enabled;
