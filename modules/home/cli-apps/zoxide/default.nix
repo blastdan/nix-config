@@ -8,15 +8,16 @@ let
 in
 {
   options.blastdan.cli-apps.zoxide = {
-    enable = mkEnableOption "gh";
+    enable = mkEnableOption "zoxide";
   };
 
   config = mkIf cfg.enable {
     programs.zoxide = {
         enable = true;
-
         enableZshIntegration = true;
-
+    };
+    programs.zsh.shellAliases = {
+      cd = "z";
     };
   };
 }

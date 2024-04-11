@@ -15,5 +15,9 @@ in
     home.packages = with pkgs; [
       lazygit
     ];
+
+    programs.zsh.shellAliases = {
+      lz = "lazygit";
+    };
   };
 }

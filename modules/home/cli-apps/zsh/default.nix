@@ -2,14 +2,17 @@
   lib,
   config,
   pkgs,
+  options,
   ...
-}: let
-  inherit (lib) mkEnableOption mkIf;
-
+}:
+with lib;
+with lib.blastdan;
+let
   cfg = config.blastdan.cli-apps.zsh;
 in {
   options.blastdan.cli-apps.zsh = {
     enable = mkEnableOption "ZSH";
+    greeting = mkOpt types.str "Blastdan" "The greeting to show on new shells";
   };
 
   config = mkIf cfg.enable {
@@ -30,11 +33,13 @@ in {
           # Fix an issue with tmux.
           export KEYTIMEOUT=1
 
-          ${pkgs.toilet}/bin/toilet -f future "Blastdan" --gay
+          ${pkgs.toilet}/bin/toilet -f future ${cfg.greeting} --gay
         '';
 
         shellAliases = {
           say = "${pkgs.toilet}/bin/toilet -f pagga";
+          ls = "ls --color -l -h";
+          grep="grep -n --color";
         };
 
         zplug = {
