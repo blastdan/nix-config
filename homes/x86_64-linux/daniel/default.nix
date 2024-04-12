@@ -26,6 +26,7 @@ with lib.blastdan;
     tools = {
       git = enabled;
       direnv = enabled;
+      go-task = enabled;
     };
     cloud = {
       gcloud = enabled;
