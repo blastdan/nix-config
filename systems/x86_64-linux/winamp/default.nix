@@ -13,7 +13,6 @@ with lib.blastdan;
     };
     tools = {
       git = enabled;
-      k8s = enabled;
     };
   };
 

@@ -32,6 +32,7 @@ with lib.blastdan;
       terraformer = enabled;
       tfenv = enabled;
       terragrunt = enabled;
+      k8s = enabled;
     };
     languages = {
       go = enabled;

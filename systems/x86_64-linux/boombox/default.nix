@@ -109,7 +109,6 @@ with lib.blastdan; {
       yubikey = enabled;
     };
     tools = {
-      k8s = enabled;
       git = enabled;
       podman = enabled;
     };
