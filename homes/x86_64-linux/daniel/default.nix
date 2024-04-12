@@ -21,12 +21,14 @@ with lib.blastdan;
       fzf = enabled;
       zoxide = enabled;
       nix-prefetch-github = enabled;
+      asciiquarium = enabled;
     };
 
     tools = {
       git = enabled;
       direnv = enabled;
       go-task = enabled;
+      bottom = enabled;
     };
     cloud = {
       gcloud = enabled;

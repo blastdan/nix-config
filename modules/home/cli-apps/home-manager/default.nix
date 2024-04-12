@@ -5,6 +5,7 @@ let
   inherit (lib.blastdan) enabled;
 
   cfg = config.blastdan.cli-apps.home-manager;
+  name = config.blastdan.user.name;
 in
 {
   options.blastdan.cli-apps.home-manager = {
@@ -13,5 +14,9 @@ in
 
   config = mkIf cfg.enable {
     programs.home-manager = enabled;
+
+    programs.zsh.shellAliases = {
+      switch = "home-manager switch --flake .#${name}";
+    };
   };
 }
