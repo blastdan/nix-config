@@ -26,6 +26,7 @@ in
 
       settings = {
         theme = "catppuccin-macchiato";
+        mouse_mode = false;
       };
     };
   };
