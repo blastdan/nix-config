@@ -22,6 +22,7 @@ with lib.blastdan;
       zoxide = enabled;
       nix-prefetch-github = enabled;
       asciiquarium = enabled;
+      zellij = enabled;
     };
 
     tools = {
