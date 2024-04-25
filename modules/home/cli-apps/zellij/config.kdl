@@ -1,0 +1,12 @@
+mouse_mode false
+theme "catppuccin-macchiato"
+
+keybinds {
+    pane {
+        bind "Alt f" {
+            LaunchOrFocusPlugin "zellij:strider" {
+                close_on_selection true
+            };
+        }
+    }
+}

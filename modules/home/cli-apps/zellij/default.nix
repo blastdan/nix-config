@@ -17,17 +17,16 @@ in
         source = ./themes;
     };
 
+    home.file.".config/zellij/config.kdl" = {
+        source = ./config.kdl;
+    };
+
     programs.zellij = {
       enable = true;
 
       enableBashIntegration = true;
       enableZshIntegration = true;
       enableFishIntegration = true;
-
-      settings = {
-        theme = "catppuccin-macchiato";
-        mouse_mode = false;
-      };
     };
   };
 }

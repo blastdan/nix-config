@@ -36,6 +36,10 @@
           url = "github:suchipi/Bibata_Cursor";
           flake = false;
         };
+
+        zjstatus = {
+          url = "github:dj95/zjstatus";
+        };
     };
 
     outputs = inputs: let
@@ -64,6 +68,9 @@
             
             overlays = with inputs; [
               tfenv.overlays.default
+              (final: prev: {
+                zjstatus = zjstatus.packages.${prev.system}.default;
+              })
             ];
 
             channels-config = {

@@ -23,6 +23,7 @@ with lib.blastdan;
       nix-prefetch-github = enabled;
       asciiquarium = enabled;
       zellij = enabled;
+      helix = enabled;
     };
 
     tools = {
