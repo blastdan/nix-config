@@ -27,7 +27,9 @@ with lib.blastdan; {
       devbox = enabled;
     };
     cloud = {
-      gcloud =  enabled;
+      gcloud = enabled;
+      terraformer = enabled;
+      tfenv = enabled;
     };
   };
 }
