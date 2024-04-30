@@ -27,6 +27,7 @@ in
         pkgs.marksman
         pkgs.terraform-ls
         pkgs.nil
+        pkgs.yaml-language-server
       ];
 
       settings = {

@@ -1,4 +1,4 @@
-mouse_mode false
+mouse_mode true
 theme "catppuccin-macchiato"
 
 keybinds {
@@ -8,5 +8,11 @@ keybinds {
                 close_on_selection true
             };
         }
+    }
+    locked {
+        bind "Alt Left" { MoveFocus "Left"; }
+        bind "Alt Right" { MoveFocus "Right"; }
+        bind "Alt Up" { MoveFocus "Up"; }
+        bind "Alt Down" { MoveFocus "Down"; }
     }
 }

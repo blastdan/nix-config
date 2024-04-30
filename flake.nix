@@ -1,10 +1,10 @@
 {
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+        nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
         # NixPkgs Unstable (nixos-unstable)
         unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-
         # Snowfall Lib
         snowfall-lib.url = "github:snowfallorg/lib/dev";
         snowfall-lib.inputs.nixpkgs.follows = "nixpkgs";
@@ -16,7 +16,7 @@
 
         tfenv.url = "github:cjlarose/tfenv-nix";
 
-	# Hardware Configuration
+	      # Hardware Configuration
         nixos-hardware = {
           url = "github:nixos/nixos-hardware";
         };
@@ -39,6 +39,12 @@
 
         zjstatus = {
           url = "github:dj95/zjstatus";
+        };
+
+        neovim = {
+          url = "github:blastdan/neovim-nix";
+          # This flake currently requires changes that are only on the Unstable channel.
+          inputs.nixpkgs.follows = "unstable";
         };
     };
 
@@ -68,9 +74,10 @@
             
             overlays = with inputs; [
               tfenv.overlays.default
+              neovim.overlays.default
               (final: prev: {
                 zjstatus = zjstatus.packages.${prev.system}.default;
-              })
+              })              
             ];
 
             channels-config = {
@@ -79,10 +86,14 @@
             
             # Add modules to all NixOS systems.
             systems.modules.nixos = with inputs; [
-              # my-input.nixosModules.my-module
             ];
+
             # Add modules to a specific system.
             systems.hosts.winamp.modules = with inputs; [
+            ];
+
+            # Add modules to all homes
+            homes.modules = with inputs; [
             ];
         };
 }

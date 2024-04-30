@@ -24,8 +24,11 @@ with lib.blastdan;
       asciiquarium = enabled;
       zellij = enabled;
       helix = enabled;
+      neovim = enabled;
     };
-
+    system = {
+      wsl = enabled;
+    };
     tools = {
       git = enabled;
       direnv = enabled;
@@ -38,6 +41,7 @@ with lib.blastdan;
       tfenv = enabled;
       terragrunt = enabled;
       k8s = enabled;
+      kind = enabled;
     };
     languages = {
       go = enabled;
