@@ -16,15 +16,24 @@ with lib.blastdan; {
       k9s = enabled;
       lazygit = enabled;
       gh = enabled;
-      zsh = enabled;
+      zsh = {
+        enable = true;
+        greeting = "BoomBox";
+      };
       fzf = enabled;
       zoxide = enabled;
       nix-prefetch-github = enabled;
+      asciiquarium = enabled;
+      zellij = enabled;
+      helix = enabled;
+      neovim = enabled;
     };
+
     tools = {
       git = enabled;
       direnv = enabled;
-      devbox = enabled;
+      go-task = enabled;
+      bottom = enabled;
     };
     cloud = {
       gcloud = enabled;
