@@ -8,7 +8,7 @@ in
 {
   options.blastdan.terminal.kitty = {
     enable = mkBoolOpt false "Kitty terminal emulator";
-    font = mkOpt types.str "MonaspiceKr Nerd Font" "Font to use for kitty.";
+    font = mkOpt types.str "MesloLGL Nerd Font Mono" "Font to use for kitty.";
     theme = mkOpt types.str "Catppuccin-Macchiato" "Theme to use for kitty.";
     };
 
@@ -107,6 +107,7 @@ in
           click_interval = "0.5";
           mouse_hide_wait = 0;
           focus_follows_mouse = "no";
+          mouse_map = "right press ungrabbed paste_from_selection";
 
           # Performance
           repaint_delay = 20;
@@ -119,7 +120,7 @@ in
           bell_on_tab = "yes";
 
           # Window
-          remember_window_size = "no";
+          remember_window_size = "yes";
           initial_window_width = 700;
           initial_window_height = 400;
           window_border_width = 0;
@@ -128,7 +129,7 @@ in
           inactive_text_alpha = "1.0";
           background_opacity = "0.90";
           placement_strategy = "center";
-          hide_window_decorations = "no";
+          hide_window_decorations = "yes";
           confirm_os_window_close = -1;
           # 0 if you dont want confirmation to close kitty instances with running commands
 

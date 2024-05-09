@@ -26,9 +26,7 @@ with lib.blastdan; {
       asciiquarium = enabled;
       zellij = enabled;
       helix = enabled;
-      neovim = enabled;
     };
-
     tools = {
       git = enabled;
       direnv = enabled;
@@ -37,6 +35,7 @@ with lib.blastdan; {
     };
     cloud = {
       gcloud = enabled;
+      k8s = enabled;
       terraformer = enabled;
       tfenv = enabled;
     };

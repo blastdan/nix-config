@@ -77,7 +77,6 @@ with lib.blastdan; {
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
-      neovim
       vscode
     ];
   };
@@ -117,6 +116,9 @@ with lib.blastdan; {
       addons = {
         alacritty = enabled;
       };
+    };
+    system = {
+      fonts = enabled;
     };
   };
 
