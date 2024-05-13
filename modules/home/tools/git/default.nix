@@ -19,6 +19,10 @@ in
       enable = true;
       inherit (cfg) userName userEmail;
       lfs = enabled;
+      aliases = {
+        lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative";
+        cob = "checkout -b";
+      };
       extraConfig = {
         init = { defaultBranch = "main"; };
         pull = { rebase = true; };

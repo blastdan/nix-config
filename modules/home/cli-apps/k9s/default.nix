@@ -3,7 +3,6 @@
 let
   inherit (lib) mkEnableOption mkIf;
   inherit (lib.blastdan) enabled;
-
   cfg = config.blastdan.cli-apps.k9s;
 in
 {
@@ -12,8 +11,37 @@ in
   };
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs; [
-      k9s
-    ];
+    home.file.".config/k9s/skins" = {
+        recursive = true;
+        source = ./skins;
+    };
+
+    programs.k9s = {
+      enable = true;
+
+      aliases = {
+        aliases = {
+          pp = "v1/pods"; 
+        };
+      };
+
+      settings = {
+        k9s = {
+          liveViewAutoRefresh = false;
+          refreshRate = 2;
+          maxConnRetry = 5;
+          readOnly = false;
+          ui = {
+            enableMouse = false;
+            headless = false;
+            logoless = false;
+            crumbsless = false;
+            noIcons = false;
+            reactive = false;
+            skin = "catppuccin-mocha";
+          };
+        };
+      };
+    };
   };
 }

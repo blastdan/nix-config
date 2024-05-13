@@ -9,7 +9,7 @@
         snowfall-lib.url = "github:snowfallorg/lib/dev";
         snowfall-lib.inputs.nixpkgs.follows = "nixpkgs";
 
-        home-manager.url = "github:nix-community/home-manager/release-23.11";
+        home-manager.url = "github:nix-community/home-manager/master";
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
  
         nixos-wsl.url = "github:nix-community/nixos-wsl";
