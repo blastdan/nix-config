@@ -25,9 +25,17 @@ in {
     programs = {
       zsh = {
         enable = true;
-        enableAutosuggestions = true;
         enableCompletion = true;
         syntaxHighlighting.enable = true;
+
+        autosuggestion = {
+          enable = true;
+        };
+
+        initExtraFirst = ''
+          autoload -U bashcompinit
+          bashcompinit
+        '';
 
         initExtra = ''
           # Fix an issue with tmux.

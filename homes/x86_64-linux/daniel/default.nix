@@ -45,6 +45,7 @@ with lib.blastdan;
     };
     languages = {
       go = enabled;
+      pyenv = enabled;
     };
   };
 
