@@ -11,10 +11,10 @@ in
   };
 
   config = mkIf cfg.enable {
-    home.file.".config/k9s/skins" = {
-        recursive = true;
-        source = ./skins;
-    };
+    # home.file.".config/k9s/skins" = {
+    #     recursive = true;
+    #     source = ./skins;
+    # };
 
     programs.k9s = {
       enable = true;
@@ -25,6 +25,11 @@ in
         };
       };
 
+      catppuccin = mkIf (config.blastdan.style.catppuccin.enable) {
+        enable = true;
+        transparent = true;
+      };
+
       settings = {
         k9s = {
           liveViewAutoRefresh = false;
@@ -32,13 +37,13 @@ in
           maxConnRetry = 5;
           readOnly = false;
           ui = {
-            enableMouse = false;
+            enableMouse = true;
             headless = false;
             logoless = false;
             crumbsless = false;
             noIcons = false;
             reactive = false;
-            skin = "catppuccin-mocha";
+            # skin = "catppuccin-macchiato-transparent";
           };
         };
       };

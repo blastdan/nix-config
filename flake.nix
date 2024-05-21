@@ -46,6 +46,8 @@
           # This flake currently requires changes that are only on the Unstable channel.
           inputs.nixpkgs.follows = "unstable";
         };
+
+        catppuccin.url = "github:catppuccin/nix";
     };
 
     outputs = inputs: let
@@ -94,6 +96,7 @@
 
             # Add modules to all homes
             homes.modules = with inputs; [
+              catppuccin.homeManagerModules.catppuccin
             ];
         };
 }

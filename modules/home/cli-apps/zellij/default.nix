@@ -12,14 +12,14 @@ in
   };
 
   config = mkIf cfg.enable {
-    home.file.".config/zellij/themes" = {
-        recursive = true;
-        source = ./themes;
-    };
+    # home.file.".config/zellij/themes" = {
+    #     recursive = true;
+    #     source = ./themes;
+    # };
 
-    home.file.".config/zellij/config.kdl" = {
-        source = ./config.kdl;
-    };
+    # home.file.".config/zellij/config.kdl" = {
+    #     source = ./config.kdl;
+    # };
 
     programs.zellij = {
       enable = true;
@@ -27,6 +27,8 @@ in
       enableBashIntegration = true;
       enableZshIntegration = true;
       enableFishIntegration = true;
+
+      catppuccin.enable = config.blastdan.style.catppuccin.enable;
     };
   };
 }

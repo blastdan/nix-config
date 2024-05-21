@@ -24,7 +24,12 @@ with lib.blastdan;
       asciiquarium = enabled;
       zellij = enabled;
       helix = enabled;
-      neovim = enabled;
+    };
+    style ={
+      catppuccin = {
+        enable = true;
+        flavour = "macchiato";
+      };
     };
     system = {
       wsl = enabled;
@@ -46,6 +51,7 @@ with lib.blastdan;
     languages = {
       go = enabled;
       pyenv = enabled;
+      kcl = enabled;
     };
   };
 
