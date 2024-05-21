@@ -19,6 +19,8 @@ in
       enable = true;
       package = pkgs.fzf;
 
+      catppuccin.enable = config.blastdan.style.catppuccin.enable;
+
       enableBashIntegration = true;
       enableZshIntegration = true;
       enableFishIntegration = true;

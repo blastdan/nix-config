@@ -32,5 +32,9 @@ in
         pkgs.blastdan.gh-poi
       ];
     };
+
+    programs.gh-dash = {
+      catppuccin.enable = config.blastdan.style.catppuccin.enable;
+    };
   };
 }

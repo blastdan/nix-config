@@ -27,6 +27,7 @@ in {
         enable = true;
         enableCompletion = true;
         syntaxHighlighting.enable = true;
+        syntaxHighlighting.catppuccin.enable = config.blastdan.style.catppuccin.enable;
 
         autosuggestion = {
           enable = true;

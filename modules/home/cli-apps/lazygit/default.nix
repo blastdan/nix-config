@@ -12,12 +12,13 @@ in
   };
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs; [
-      lazygit
-    ];
-
     programs.zsh.shellAliases = {
       lz = "lazygit";
+    };
+
+    programs.lazygit = {
+      enable = true;
+      catppuccin.enable = config.blastdan.style.catppuccin.enable;
     };
   };
 }
