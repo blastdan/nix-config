@@ -24,6 +24,7 @@ with lib.blastdan;
       asciiquarium = enabled;
       zellij = enabled;
       helix = enabled;
+      bat = enabled;
     };
     style ={
       catppuccin = {
