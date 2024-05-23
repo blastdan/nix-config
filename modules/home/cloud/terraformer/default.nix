@@ -15,9 +15,5 @@ in
     home.packages = with pkgs; [
       terraformer
     ];
-
-    programs.zsh.shellAliases = {
-      tf = "terraform";
-    };
   };
 }
