@@ -26,6 +26,13 @@ with lib.blastdan; {
       asciiquarium = enabled;
       zellij = enabled;
       helix = enabled;
+      bat = enabled;
+    };
+    style ={
+      catppuccin = {
+        enable = true;
+        flavour = "macchiato";
+      };
     };
     tools = {
       git = enabled;

@@ -88,6 +88,7 @@
             
             # Add modules to all NixOS systems.
             systems.modules.nixos = with inputs; [
+              catppuccin.nixosModules.catppuccin
             ];
 
             # Add modules to a specific system.

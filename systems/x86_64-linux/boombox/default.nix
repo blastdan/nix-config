@@ -118,6 +118,12 @@ with lib.blastdan; {
         alacritty = enabled;
       };
     };
+    style ={
+      catppuccin = {
+        enable = true;
+        flavour = "macchiato";
+      };
+    };
     system = {
       fonts = enabled;
     };
