@@ -106,6 +106,7 @@ with lib.blastdan; {
       google-chrome = enabled;
       yt-music = enabled;
       yubikey = enabled;
+      slack = enabled;
     };
     tools = {
       git = enabled;
