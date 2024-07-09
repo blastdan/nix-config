@@ -27,6 +27,7 @@ with lib.blastdan; {
       zellij = enabled;
       helix = enabled;
       bat = enabled;
+      eza = enabled;s
     };
     style ={
       catppuccin = {

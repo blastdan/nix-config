@@ -76,7 +76,7 @@ in {
             accent = "pink";
             flavour = "macchiato";
           };
-          gnomeShellTheme = true;
+          gnomeShellTheme = false;
         };
       };
     };

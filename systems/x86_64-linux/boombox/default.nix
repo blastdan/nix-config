@@ -112,6 +112,10 @@ with lib.blastdan; {
       git = enabled;
       podman = enabled;
     };
+    languages = {
+      pyenv = enabled;
+      python3 = enabled;
+    };
     desktop = {
       gnome = enabled;
       addons = {
